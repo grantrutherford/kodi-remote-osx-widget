@@ -9,15 +9,15 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
-	<string>Untitled</string>
+	<string>KODI Remote</string>
 	<key>CFBundleIdentifier</key>
-	<string>XBMC Remote</string>
+	<string>KODI Remote</string>
 	<key>CFBundleName</key>
-	<string>Untitled</string>
+	<string>KODI Remote</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.5</string>
+	<string>3.0.0</string>
 	<key>CFBundleVersion</key>
-	<string>2.0.5</string>
+	<string>3.0.0</string>
 	<key>CloseBoxInsetX</key>
 	<integer>15</integer>
 	<key>CloseBoxInsetY</key>
