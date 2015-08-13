@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
+    <div id="front" ondragenter="Drag(event);" ondragover="Drag(event);" ondrop="Drop(event)" ondragleave="Drag(event)">
+        <img id="frontImage" src="Parts/Images/front.png" alt="" apple-part="com.apple.Dashcode.part.frontimage">
+        <div id="logo" class="start" onclick="StartXBMC()"></div>
+        <div id="backward" onclick="Remote('Input.ExecuteAction','rewind')"></div>
+        <div id="stop" onclick="Remote('Input.ExecuteAction','stop')"></div>
+        <div id="pause" onclick="Remote('Input.ExecuteAction','pause')"></div>
+        <div id="forward" onclick="Remote('Input.ExecuteAction','fastforward')"></div>
+        <div id="go_left" onclick="ShiftFunc('stepback','Input.Left')"></div>
+        <div id="go_up" onclick="ShiftFunc('bigstepforward','Input.Up')"></div>
+        <div id="select" onclick="Remote('Input.Select')"></div>
+        <div id="go_down" onclick="ShiftFunc('bigstepback','Input.Down')"></div>
+        <div id="go_right" onclick="ShiftFunc('stepforward','Input.Right')"></div>
+        <div id="vol_up" onclick="Remote('Input.ExecuteAction','volumeup')"></div>
+        <div id="vol_down" onclick="Remote('Input.ExecuteAction','volumedown')"></div>
+        <div id="homekey" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" onclick="Remote('Input.Home')"></div>
+        <div id="backkey" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" onclick="Remote('Input.Back')"></div>
+        <div id="infokey" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" onclick="Remote('Input.Info')"></div>
+        <div id="menukey" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" onclick="Remote('Input.ShowOSD')"></div>
+        <div id="infobutton" apple-part="com.apple.Dashcode.part.infobutton" class="info apple-no-children" apple-default-image-visibility="hidden"></div>
+        <div id="notify" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-style="part-height-dependent: true;part-width-dependent: true;" style="display: none;"></div>
+    </div>
+    <div id="textinput">
+        <div id="textentry" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
+        <div id="textexplain" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
+        <img id="textImg" src="Parts/Images/back.png">
+        <input id="sendtext" type="text" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield">
+        <div id="send" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" onclick="showpane('textinput','front'); keyboard=0; Remote('Input.SendText');"></div>
+    </div>
+    <div id="back">
+        <img id="backImg" src="Parts/Images/back.png" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage">
+        <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton" onclick="showpane('back','front'); keyboard=0; save_preferences(); disconnect();"></div>
+        <form name="preferences_pane" id="form">
+            <input type="text" id="host" value="192.168.1.1" apple-part="com.apple.Dashcode.part.textfield">
+            <input type="text" id="portxbmc" value="9090" apple-part="com.apple.Dashcode.part.textfield">
+            <input type="text" id="portssh" name="portssh" value="22" apple-part="com.apple.Dashcode.part.textfield">
+            <input type="text" id="user" value="xbmc" apple-part="com.apple.Dashcode.part.textfield">
+            <input type="password" id="pass" value="xbmc" apple-part="com.apple.Dashcode.part.textfield">
+            <div id="hostlabel" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
+            <div id="portxbmclabel" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
+            <div id="portsshlabel" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
+            <div id="userlabel" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
+            <div id="passlabel" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
+        </form>
+    </div>
+</body>
+</html>
