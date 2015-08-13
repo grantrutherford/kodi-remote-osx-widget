@@ -144,7 +144,7 @@ function StartXBMC() {
     var uservalue = widget.preferenceForKey('userkey');
     var passvalue = widget.preferenceForKey('passkey');
     var command = '/usr/bin/expect -c "spawn ssh -p'+portsshvalue+' '+uservalue+'@'+hostvalue+'; expect password:; send '+passvalue+
-                        '\\r; send screen\\ -d\\ -m\\ xinit\\ xbmc\\r; expect xorg.conf.d; send \\001; send d; send exit\\r"';
+                        '\\r; send screen\\ -d\\ -m\\ xinit\\ xbmc\\r; expect xorg.conf.d; send \\001d; send exit\\r"';
     widget.system(command, null);
 }
 
@@ -354,28 +354,23 @@ function Paste(event) {
     makelink(url);
 }
 
-// Detect link type:
-function linkType(str, suffix) {
-    return str.indexOf(suffix, str.length - suffix.length)!==-1;
-}
-
 // Extract video- or playlist-id and send to remote function:
 function makelink(url) {
     var yt = url[0].search('youtube');
-    var urlv = linkType(url[0],'watch');
-    var urlp = linkType(url[0],'playlist');   
+    var urlv = url[0].search('watch');
+    var urlp = url[0].search('playlist');
     var urlid = new Array();
     try {urlid = url[1].split(/[=&]/);} catch (e) {};
     var notify = document.getElementById('notify');
-    //window.alert(urlv);
-    if (yt!=-1 && urlv==true && urlid[1]) {
+    //window.alert(url[0]);
+    if (yt!=-1 && urlv!=-1 && urlid[1]) {
         Remote('Playlist.Clear','','Playlist.Add','plugin://plugin.video.youtube/?action=play_video&videoid='+urlid[1],'Player.Open','');
     }
-    else if (yt!=-1 && urlp==true && urlid[1]) {
+    else if (yt!=-1 && urlp!=-1 && urlid[1]) {
         Remote('Player.Open','plugin://plugin.video.youtube/?path=/root/playlists&action=play_all&playlist='+urlid[1]);
         
     } 
     else {
-        notify.style.display = 'block'; setTimeout('notify.style.display = "none";', 2000);
+        notify.style.display = 'block'; setTimeout('notify.style.display = "none";', 1500);
     };
 }
