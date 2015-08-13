@@ -501,3 +501,138 @@ body {
     -khtml-margin-top-collapse: separate;
     -khtml-margin-bottom-collapse: separate;
 }
+
+/* Pixel ratio of 2. */
+@media screen and (-webkit-min-device-pixel-ratio: 2) 
+{
+  #backdrop { 
+		content: url("Parts/Images/front@2x.png");
+    width: 450px;
+    height: 94px;
+	}
+  
+  .start {    
+      background-image: url(Images/start@2x.png);
+      background-size: 94px 94px;
+  }
+
+  .start:hover {
+      background-image: url(Images/start_on@2x.png);
+      background-size: 94px 94px;
+  }
+
+  .logo {
+      background-image: url(Images/start@2x.png);
+      background-size: 94px 94px;
+  }
+
+  #backward {
+      background-image: url(Images/backkey@2x.png);
+      background-size: 24px 24px;
+  }
+
+  #backward:hover {
+      background-image: url(Images/backkey_on@2x.png);
+      background-size: 24px 24px;
+  }
+
+  #stop {
+      background-image: url(Images/stopkey@2x.png);
+      background-size: 24px 24px;
+  }
+
+  #stop:hover {
+      background-image: url(Images/stopkey_on@2x.png);
+      background-size: 24px 24px;
+  }
+
+  #pause {
+      background-image: url(Images/playkey@2x.png);
+      background-size: 24px 24px;
+  }
+
+  #pause:hover {
+      background-image: url(Images/playkey_on@2x.png);
+      background-size: 24px 24px;
+  }
+
+  #forward {
+      background-image: url(Images/forwardkey@2x.png);
+      background-size: 24px 24px;
+  }
+
+  #forward:hover {
+      background-image: url(Images/forwardkey_on@2x.png);
+      background-size: 24px 24px;
+  }
+
+  #go_left {
+      background-image: url(Images/goleft@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #go_left:hover {
+      background-image: url(Images/goleft_on@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #go_up {
+      background-image: url(Images/goup@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #go_up:hover {
+      background-image: url(Images/goup_on@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #select {
+      background-image: url(Images/enter@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #select:hover {
+      background-image: url(Images/enter_on@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #go_down {
+      background-image: url(Images/godown@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #go_down:hover {
+      background-image: url(Images/godown_on@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #go_right {
+      background-image: url(Images/goright@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #go_right:hover {
+      background-image: url(Images/goright_on@2x.png);
+      background-size: 20px 20px;
+  }
+
+  #vol_up {
+      background-image: url(Images/volup@2x.png);
+      background-size: 22px 22px;
+  }
+
+  #vol_up:hover {
+      background-image: url(Images/volup_on@2x.png);
+      background-size: 22px 22px;
+  }
+
+  #vol_down {
+      background-image: url(Images/voldown@2x.png);
+      background-size: 22px 22px;
+  }
+
+  #vol_down:hover {
+      background-image: url(Images/voldown_on@2x.png);
+      background-size: 22px 22px;
+  }
+}
