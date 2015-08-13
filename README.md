@@ -1,6 +1,8 @@
 # kodi-remote-osx-widget
 OSX Dashboard Widget to control Kodi, It was originally based on the Boxee widget made by Lot49 (lot49.org), then later updated and modified for XBMC by Topfjoer who has ceesed development.
 
+![](https://raw.githubusercontent.com/grantrutherford/kodi-remote-osx-widget/master/KODI%20Remote.wdgt/Default.png)
+
 For more informtaion please see forum thread - http://forum.kodi.tv/showthread.php?tid=19448
 
 Please feel free make changes or raise issues.
