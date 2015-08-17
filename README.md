@@ -1,9 +1,9 @@
 # kodi-remote-osx-widget
-OSX Dashboard Widget to control Kodi, It was originally based on the Boxee widget made by Lot49 (lot49.org), then later updated and modified for XBMC by Topfjoer who has ceesed development.
+OSX Dashboard Widget to control Kodi, It was originally based on the Boxee widget made by Lot49 (lot49.org), then later updated and modified for XBMC by Topfjoer who has ceased development.
 
 ![](https://raw.githubusercontent.com/grantrutherford/kodi-remote-osx-widget/master/KODI%20Remote.wdgt/Default.png)
 
-For more informtaion please see forum thread - http://forum.kodi.tv/showthread.php?tid=19448
+For more information please see forum thread - http://forum.kodi.tv/showthread.php?tid=19448
 
 Please feel free make changes or raise issues.
 
@@ -41,7 +41,7 @@ Download the zip version, and double click the .wdgt file to install it in your 
 
 ## Setup
 
-In the settings pane, accessable by clicking the small i in the bottom corner:
+In the settings pane, accessible by clicking the small "i" in the bottom corner:
 
 1. Fill in the correct ip-address of the computer you're running KODI on.
 2. If necessary, change the port number. This widget now uses the WebSocket, NOT the HTTP port! Usually, this value should be kept at default (9090).
