@@ -9,7 +9,7 @@ Please feel free make changes or raise issues.
 
 ## Installation
 
-Download the zip version, and double click the .wdgt file to install it in your dashboard.
+Download the zip version, then double click the .wdgt folder in Finder to install it to your dashboard.
 
 ## Features
 
@@ -37,7 +37,10 @@ Download the zip version, and double click the .wdgt file to install it in your 
   * Queue:	q
   * Mute:	\
   * Volume down:	[
-  * Volume up: ]	
+  * Volume up: ]
+  * Step backwards: 4
+  * Step forwards/backwards: Shift Left/Right Arrow key
+  * Big Step forwards/backwards: Shift Up/Down Arrow key
 
 ## Setup
 
