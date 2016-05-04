@@ -240,6 +240,9 @@ function KeyCheck(event) {
             case 13:
                 Remote('Input.Select'); // Select (Enter)
                 break;
+            case 52:
+                Remote('Input.ExecuteAction','stepback'); // Left (4)
+                break;
             case 37:
                 ShiftFunc('stepback','Input.Left'); // Left
                 break;
